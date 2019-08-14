@@ -45,24 +45,16 @@
                         {% if forloop.counter != 14 %}
                           {% if data == '-' %}
                             <td> {{data}} </td>
-                          {% else %}
-                            {% if data > 5 %}
+                          {% elif data > 5 %}
                               <td bgcolor="#F778A1">{{data}}</td>
-                          {% else %}
-                            {% if data > 2 and data < 5  %}
+                          {% elif data > 2 and data <= 5 %}
                               <td bgcolor="#E7A1B0">{{data}}</td>
-                          {% else %}
-                            {% if data < 2 and data > 1 %}
+                          {% elif data <= 2 and data >= 1 %}
                               <td bgcolor="#FFDFDD">{{data}}</td>
-                          {% else %}
-                            {% if data < 0 %}
+                          {% elif data < 0 %}
                               <td bgcolor="#00FF00">{{data}}</td>
                           {% else %}
                             <td> {{data}} </td>
-                          {% endif %}
-                          {% endif %}
-                          {% endif %}
-                          {% endif %}
                           {% endif %}
                         {% endif %}
                       {% endif %}
